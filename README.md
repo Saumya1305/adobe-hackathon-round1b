@@ -11,7 +11,7 @@ Given a PDF, the task is to detect and output semantically related content acros
 
 ## Folder Structure
 
-
+```
 round1b/
 ├── Dockerfile
 ├── requirements.txt
@@ -26,43 +26,43 @@ round1b/
 │   │   └── challenge1b_output.json    ← (generated after run)
 │   └── model/
 │       └── paraphrase-MiniLM-L6-v2/   ← offline saved model directory
-
+```
 
 ## How to Run (Using Docker)
 
 Make sure Docker is installed and running.
 
-*1. Clone the repository*
-bash
+**1. Clone the repository**
+```bash
 git clone https://github.com/your-username/adobe-semantic-linker.git
 cd adobe-semantic-linker
+```
 
+**2. Add your PDF file**
+Place a test file (e.g., `sample.pdf`) inside the `input/` folder.
 
-*2. Add your PDF file*
-Place a test file (e.g., sample.pdf) inside the input/ folder.
-
-*3. Build the Docker image*
-bash
+**3. Build the Docker image**
+```bash
 docker build --platform linux/amd64 -t adobe-semantic-linker .
+```
 
+**4. Run the container**
 
-*4. Run the container*
-
-*On Mac/Linux:*
-bash
+**On Mac/Linux:**
+```bash
 docker run --rm -v $(pwd)/input:/app/input -v $(pwd)/output:/app/output --network none adobe-semantic-linker
+```
 
-
-*On Windows CMD:*
-bash
+**On Windows CMD:**
+```bash
 docker run --rm -v %cd%/input:/app/input -v %cd%/output:/app/output --network none adobe-semantic-linker
+```
 
-
-The output/result.json file will contain the extracted semantic links.
+The `output/result.json` file will contain the extracted semantic links.
 
 ## Example Output
 
-json
+```json
 {
   "title": "paper",
   "semantic_links": [
@@ -79,7 +79,7 @@ json
     }
   ]
 }
-
+```
 
 ## Technologies Used
 
@@ -94,12 +94,12 @@ json
 * All dependencies installed inside container
 * Offline execution (no network calls)
 * No hardcoded values
-* Supports PDF input from /app/input
-* Output saved to /app/output in required JSON format
+* Supports PDF input from `/app/input`
+* Output saved to `/app/output` in required JSON format
 * CPU optimized processing
 
 ## Team Info
 
-* *Team Name:* Maestro
-* *Hackathon:* Adobe India – "Connecting the Dots"
-* *Round:* 1B – Semantic Link Extraction
+* **Team Name:** Maestro
+* **Hackathon:** Adobe India – "Connecting the Dots"
+* **Round:** 1B – Semantic Link Extraction
