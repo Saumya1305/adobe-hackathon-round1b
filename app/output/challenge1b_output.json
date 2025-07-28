@@ -1,0 +1,38 @@
+{
+  "title": "paper",
+  "semantic_links": [
+    {
+      "source": {
+        "text": "Page 1: Artificial Intelligence (AI) is the simulation of human intelligence in machines.",
+        "page": 1
+      },
+      "target": {
+        "text": "AI systems are designed to perform tasks such as recognizing speech, learning, and",
+        "page": 1
+      },
+      "score": 0.61
+    },
+    {
+      "source": {
+        "text": "Page 2: One of the major areas of AI is Natural Language Processing (NLP).",
+        "page": 2
+      },
+      "target": {
+        "text": "NLP allows machines to understand and generate human language.",
+        "page": 2
+      },
+      "score": 0.69
+    },
+    {
+      "source": {
+        "text": "Page 3: Ethical concerns about AI are increasingly important.",
+        "page": 3
+      },
+      "target": {
+        "text": "Researchers advocate for responsible development of AI technologies.",
+        "page": 3
+      },
+      "score": 0.65
+    }
+  ]
+}
